@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Катт Елена](https://up.htmlacademy.ru/adaptive/20/user/1486223).
-* Наставник: `Неизвестно`.
+* Наставник: [Попенко Сергей](https://htmlacademy.ru/profile/id66243).
 
 ---
 
