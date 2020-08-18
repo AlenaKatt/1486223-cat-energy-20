@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
 
   <body class="page__body">
@@ -18,18 +19,18 @@
         </button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list">
-            <li class="site-list__item">
-              <a href="index.html">
+            <li class="site-list__item site-list-text">
+              <a class="site-list__link" href="index.html">
                 Главная
               </a>
             </li>
-            <li class="site-list__item">
-              <a href="form.html">
+            <li class="site-list__item site-list-text">
+              <a class="site-list__link" href="form.html">
                 Каталог продукции
               </a>
             </li>
-            <li class="site-list__item site-list__item--active">
-              <a>
+            <li class="site-list__item site-list-text site-list__item--active">
+              <a class="site-list__link">
                 Подбор программы
               </a>
             </li>
@@ -39,41 +40,41 @@
     </header>
 
     <main class="page-main form">
-      <h1 class="form__title">Подбор программы</h1>
+      <h1 class="form__title text-title">Подбор программы</h1>
       <section class="profile">
         <form class="profile__form" method="get" action="https://echo.htmlacademy.ru">
           <div class="profile__list">
             <fieldset class="profile__item data">
               <legend class="visually-hidden">Данные для расчета программы</legend>
-              <p class="data__text">
+              <p class="data__text data-text">
                 Заполните анкету, и мы подберем<br>
                 программу питания для вашего кота
               </p>
               <div class="data__wrapper checklist">
                 <ul class="checklist__list questionnaire">
-                  <li class="questionnaire__item">
+                  <li class="questionnaire__item data-text-grey">
                     <label class="questionnaire__label" for="name">Имя:*</label>
                     <input class="questionnaire__input" type="text" name="name" id="name" value="БАРСИК" required>
                   </li>
-                  <li class="questionnaire__item">
+                  <li class="questionnaire__item data-text-grey">
                     <label class="questionnaire__label"  for="weight">Вес (кг):*</label>
                     <input class="questionnaire__input" type="text" name="weight" id="weight" value="7" required>
                   </li>
-                  <li class="questionnaire__item">
+                  <li class="questionnaire__item data-text-grey">
                     <label class="questionnaire__label" for="age">Возраст (лет):</label>
                     <input class="questionnaire__input" type="text" name="age" id="age" value="7">
                   </li>
                 </ul>
                 <ul class="checklist__list regimen">
-                  <li class="regimen__item">
+                  <li class="regimen__item data-text-grey-2">
                     <input class="regimen__input" type="radio" name="question" id="question-1" value="1" checked>
                     <label class="regimen__label" for="question-1">Похудение</label>
                   </li>
-                  <li class="regimen__item">
+                  <li class="regimen__item data-text-grey-2">
                     <input class="regimen__input" type="radio" name="question" id="question-2" value="2">
                     <label class="regimen__label" for="question-2">Набор массы</label>
                   </li>
-                  <li class="regimen__item">
+                  <li class="regimen__item data-text-grey-2">
                     <input class="regimen__input" type="radio" name="question" id="question-3" value="3">
                     <label class="regimen__label" for="question-2">Не знаю (нужен ваш совет)</label>
                   </li>
@@ -81,67 +82,67 @@
               </div>
             </fieldset>
             <fieldset class="profile__item user-contact">
-              <legend class="user-contact__title">Контактные данные (владельца кота)</legend>
+              <legend class="profile__title profile-title">Контактные данные (владельца кота)</legend>
               <ul class="user-contact__list">
-                <li class="user-contact__item">
+                <li class="user-contact__item data-text-grey">
                   <label class="user-contact__label" for="email">Email:*</label>
                   <input class="user-contact__input" type="email" name="email" id="email" value="KUKLACHEV@GMAIL.COM" required>
                   <div class="user-contact__image-icon">
-                    <svg></svg>
                     <span class="visually-hidden">Картинка конверт</span>
                   </div>
                 </li>
-                <li class="user-contact__item">
+                <li class="user-contact__item data-text-grey">
                   <label class="user-contact__label" for="tel">Телефон:*</label>
                   <input class="user-contact__input" type="tel" id="tel" name="tel" value="8 (960) 900-60-90" required>
                   <div class="user-contact__image-icon">
-                    <svg></svg>
                     <span class="visually-hidden">Картинка телефонная трубка</span>
                   </div>
                 </li>
               </ul>
             </fieldset>
             <fieldset class="profile__item comment">
-              <legend class="comment__title">Комментарий</legend>
-              <textarea class="comment__text" name="comment" rows="6" placeholder="РАССКАЖИТЕ ОБО ВСЕХ ПОВАДКАХ КОТА"></textarea>
+              <legend class="profile__title profile-title">Комментарий</legend>
+              <textarea class="comment__text data-text-grey" name="comment" rows="6" placeholder="РАССКАЖИТЕ ОБО ВСЕХ ПОВАДКАХ КОТА"></textarea>
             </fieldset>
             <fieldset class="profile__item additionally">
-              <legend class="additionally__title">Дополнительно</legend>
+              <legend class="profile__title profile-title">Дополнительно</legend>
               <ul class="additionally__list">
-                <li class="additionally__item">
+                <li class="additionally__item additionally-text">
                   <input class="additionally__input" type="checkbox" name="substitute" id="substitute" checked>
                   <label class="additionally__label" for="substitute">Сахарозаменитель</label>
                 </li>
-                <li class="additionally__item">
+                <li class="additionally__item additionally-text">
                   <input class="additionally__input" type="checkbox" name="water" id="water">
                   <label class="additionally__label" for="water">Питьевая вода</label>
                 </li>
-                <li class="additionally__item">
+                <li class="additionally__item additionally-text">
                   <input class="additionally__input" type="checkbox" name="milk" id="milk">
                   <label class="additionally__label" for="milk">Молоко</label>
                 </li>
-                <li class="additionally__item">
+                <li class="additionally__item additionally-text">
                   <input class="additionally__input" type="checkbox" name="vitamins" id="vitamins">
                   <label class="additionally__label" for="vitamins">Витамины</label>
                 </li>
               </ul>
             </fieldset>
-            <input class="profile__button button" type="submit" name="submit" value="Отправить заявку">
+            <div class="profile__wrapper-button">
+              <input class="button-input" type="submit" name="submit" value="Отправить заявку">
+            </div>
             <small class="profile__small">* — Обязательные поля</small>
           </div>
         </form>
       </section>
 
-      <section class="contacts contacts-another">
+      <section class="contacts contacts__wrapper">
         <h2 class="visually-hidden">
           Наш адрес
         </h2>
-        <strong class="contacts__invitation">
+        <strong class="contacts__invitation contacts-invitation">
           Приглашаем<br>
           к сотрудничеству<br>
           дилеров!
         </strong>
-        <p class="contacts__address">
+        <p class="contacts__address contacts-address">
           ул. Большая<br>
           Конюшенная, д. 19/8<br>
           Санкт-Петербург
@@ -160,23 +161,26 @@
       <a class="page-footer__logo" href="index.html">
         <img src="img/logo2-mobile.svg" width="101" height="18" alt="Логотип Кэт Энерджи">
       </a>
-      <div class="page-footer__social social">
-        <ul class="social__list">
-          <li class="social__item">
-            <a class="social__link social__link--vkontakte" href="#">Мы в Вконтакте</a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--youtube" href="#">Мы в Ютубе</a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--facebook" href="#">Мы в Фэйсбуке</a>
-          </li>
-        </ul>
-      </div>
+      <ul class="page-footer__social social-list">
+        <li class="social-list__item">
+          <a class="social-list__link social-list__link--vkontakte" href="#">
+            <span class="visually-hidden">Мы в контакте</span>
+          </a>
+        </li>
+        <li class="social-list__item">
+          <a class="social-list__link social-list__link--youtube" href="#">
+            <span class="visually-hidden">Мы в ютубе</span>
+          </a>
+        </li>
+        <li class="social-list__item">
+          <a class="social-list__link social-list__link--facebook" href="#">
+            <span class="visually-hidden">Мы в Фэйсбуке</span>
+          </a>
+        </li>
+      </ul>
       <div class="page-footer__copyright copyright">
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+        <a class="copyright__link copyright-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
         <a class="copyright__logo-html" href="https://htmlacademy.ru/intensive/adaptive">
-          <svg></svg>
           <span class="visually-hidden">Ссылка на интенсив</span>
         </a>
       </div>
