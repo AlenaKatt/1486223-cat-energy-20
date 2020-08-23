@@ -1,5 +1,33 @@
-.user-contact__list {
-  .style-list();
-  padding-left: 20px;
-  padding-right: 20px;
+.user-contact__title-wrapper {
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  padding-top: 26px;
+  padding-bottom: 33px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 75px;
+    padding-bottom: 76px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 69px;
+  }
 }
+
+.user-contact__list {
+  display: grid;
+  gap: 14px;
+  .style-list();
+
+  @media (min-width: @tablet-width) {
+    gap: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 80px;
+    row-gap: 30px;
+  }
+}
+

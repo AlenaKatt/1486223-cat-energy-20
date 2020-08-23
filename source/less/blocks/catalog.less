@@ -1,9 +1,28 @@
+.catalog {
+  background: @basic;
+}
+
 .catalog__title {
   display: block;
   margin: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
   padding-top: 27px;
   padding-bottom: 41px;
-  padding-left: 20px;
-  padding-right: 42px;
-  .border-bottom();
+
+  @media (min-width: @tablet-width) {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 40px;
+    padding-bottom: 164px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 1440px;
+    padding-left: 110px;
+    padding-right: 110px;
+    padding-top: 47px;
+    padding-bottom: 165px;
+    margin: 0 auto;
+  }
 }

@@ -1,7 +1,39 @@
 .advice {
   position: relative;
+}
+
+.advice__intro-wrapper {
   padding-left: 20px;
   padding-right: 20px;
+
+@media (min-width: @tablet-width) {
+  padding-left: 117px;
+  padding-right: 117px;
+}
+
+@media (min-width: @desktop-width) {
+  max-width: 1440px;
+  padding-left: 190px;
+  padding-right: 190px;
+  margin: 0 auto;
+}
+}
+
+.advice__list-wrapper {
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 1440px;
+    padding-left: 110px;
+    padding-right: 110px;
+    margin: 0 auto;
+  }
 }
 
 .advice__text {
@@ -9,6 +41,16 @@
   margin: 0 auto;
   margin-top: 25px;
   margin-bottom: 29px;
+
+  @media (min-width: @tablet-width)  {
+    margin-top: 41px;
+    margin-bottom: 49px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 40px;
+    margin-bottom: 52px;
+  }
 }
 
 .advice__image {
@@ -19,10 +61,30 @@
   margin: 0 auto;
   margin-top: 302px;
   margin-bottom: 22px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    margin-bottom: 526px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 267px;
+  }
 }
 
 .advice__list {
-  .style-list()
+  display: grid;
+  gap: 20px;
+  .style-list();
+
+  @media (min-width: @tablet-width) {
+    gap: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+  }
 }
 
 .advice__item {
@@ -30,6 +92,4 @@
   padding-bottom: 18px;
   padding-left: 20px;
   padding-right: 33px;
-  margin-top: 21px;
-  border-bottom: 1px solid transparent;
 }

@@ -3,4 +3,38 @@
   color: @basic_black;
 }
 
+.page-header__wrapper {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 1440px;
+    padding-left: 110px;
+    padding-right: 110px;
+    margin: 0 auto;
+  }
+}
+
+.page-header__logo-wrapper {
+  height: 66px;
+  outline: 2px solid rgba(255, 0, 0, 0.8);
+  outline-offset: -2px;
+
+  @media (min-width: @tablet-width) {
+    height: 100px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 141px;
+  }
+}
+
+
 

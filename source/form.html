@@ -9,15 +9,18 @@
   <body class="page__body">
 
     <header class="page-header">
-      <a class="page-header__logo" href="index.html">
-        <img src="img/logo1-mobile.svg" width="33" height="37" alt="Логотип Котик">
-        <img src="img/logo2-mobile.svg" width="101" height="18" alt="Кэт Энерджи">
-      </a>
-      <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
-        <div class="main-nav__wrapper">
+      <div class="page-header__wrapper">
+        <div class="page-header__logo-wrapper">
+          <a class="page-header__logo" href="index.html">
+            <img src="img/logo1-mobile.svg" width="33" height="37" alt="Логотип Котик">
+            <img src="img/logo2-mobile.svg" width="101" height="18" alt="Кэт Энерджи">
+          </a>
+          <button class="main-nav__toggle" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+        </div>
+
+        <nav class="main-nav">
           <ul class="main-nav__list site-list">
             <li class="site-list__item site-list-text">
               <a class="site-list__link" href="index.html">
@@ -25,7 +28,7 @@
               </a>
             </li>
             <li class="site-list__item site-list-text">
-              <a class="site-list__link" href="form.html">
+              <a class="site-list__link" href="catalog.html">
                 Каталог продукции
               </a>
             </li>
@@ -35,8 +38,8 @@
               </a>
             </li>
           </ul>
-        </div>
-      </nav>
+        </nav>
+      </div>
     </header>
 
     <main class="page-main form">
@@ -50,13 +53,13 @@
                 Заполните анкету, и мы подберем<br>
                 программу питания для вашего кота
               </p>
-              <div class="data__wrapper checklist">
-                <ul class="checklist__list questionnaire">
-                  <li class="questionnaire__item data-text-grey">
+              <div class="data__wrapper">
+                <ul class="data__questionnaire questionnaire">
+                  <li class="questionnaire__item--margin data-text-grey">
                     <label class="questionnaire__label" for="name">Имя:*</label>
                     <input class="questionnaire__input" type="text" name="name" id="name" value="БАРСИК" required>
                   </li>
-                  <li class="questionnaire__item data-text-grey">
+                  <li class="questionnaire__item--margin data-text-grey">
                     <label class="questionnaire__label"  for="weight">Вес (кг):*</label>
                     <input class="questionnaire__input" type="text" name="weight" id="weight" value="7" required>
                   </li>
@@ -65,7 +68,7 @@
                     <input class="questionnaire__input" type="text" name="age" id="age" value="7">
                   </li>
                 </ul>
-                <ul class="checklist__list regimen">
+                <ul class="data__regimen regimen">
                   <li class="regimen__item data-text-grey-2">
                     <input class="regimen__input" type="radio" name="question" id="question-1" value="1" checked>
                     <label class="regimen__label" for="question-1">Похудение</label>
@@ -81,8 +84,9 @@
                 </ul>
               </div>
             </fieldset>
-            <fieldset class="profile__item user-contact">
-              <legend class="profile__title profile-title">Контактные данные (владельца кота)</legend>
+
+            <fieldset class="profile__item profile__item--wrapper user-contact">
+              <legend class="user-contact__title-wrapper profile-title">Контактные данные (владельца кота)</legend>
               <ul class="user-contact__list">
                 <li class="user-contact__item data-text-grey">
                   <label class="user-contact__label" for="email">Email:*</label>
@@ -100,12 +104,12 @@
                 </li>
               </ul>
             </fieldset>
-            <fieldset class="profile__item comment">
-              <legend class="profile__title profile-title">Комментарий</legend>
+            <fieldset class="profile__item profile__item--wrapper comment">
+              <legend class="comment__title-wrapper profile-title">Комментарий</legend>
               <textarea class="comment__text data-text-grey" name="comment" rows="6" placeholder="РАССКАЖИТЕ ОБО ВСЕХ ПОВАДКАХ КОТА"></textarea>
             </fieldset>
-            <fieldset class="profile__item additionally">
-              <legend class="profile__title profile-title">Дополнительно</legend>
+            <fieldset class="profile__item profile__item--wrapper additionally">
+              <legend class="additionally__title-wrapper profile-title">Дополнительно</legend>
               <ul class="additionally__list">
                 <li class="additionally__item additionally-text">
                   <input class="additionally__input" type="checkbox" name="substitute" id="substitute" checked>
@@ -125,29 +129,36 @@
                 </li>
               </ul>
             </fieldset>
-            <div class="profile__wrapper-button">
-              <input class="button-input" type="submit" name="submit" value="Отправить заявку">
+            <div class="profile__wrapper-button-small">
+              <div class="profile__wrapper-button">
+                <input class="button-input" type="submit" name="submit" value="Отправить заявку">
+              </div>
+              <small class="profile__small">* — Обязательные поля</small>
             </div>
-            <small class="profile__small">* — Обязательные поля</small>
           </div>
         </form>
       </section>
 
-      <section class="contacts contacts__wrapper">
+      <section class="contacts contacts--variant contacts__wrapper">
         <h2 class="visually-hidden">
           Наш адрес
         </h2>
-        <strong class="contacts__invitation contacts-invitation">
+        <p class="contacts__invitation contacts-invitation">
           Приглашаем<br>
           к сотрудничеству<br>
           дилеров!
-        </strong>
-        <p class="contacts__address contacts-address">
-          ул. Большая<br>
-          Конюшенная, д. 19/8<br>
-          Санкт-Петербург
         </p>
+        <div>
+          <p class="contacts__address contacts-address">
+            ул. Большая<br>
+            Конюшенная, д. 19/8
+          </p>
+          <p class="contacts__city contacts-address">
+            Санкт-Петербург
+          </p>
+        </div>
       </section>
+
       <section class="map">
         <h2 class="visually-hidden">
           Мы на карте
@@ -158,31 +169,33 @@
     </main>
 
     <footer class="page-footer">
-      <a class="page-footer__logo" href="index.html">
-        <img src="img/logo2-mobile.svg" width="101" height="18" alt="Логотип Кэт Энерджи">
-      </a>
-      <ul class="page-footer__social social-list">
-        <li class="social-list__item">
-          <a class="social-list__link social-list__link--vkontakte" href="#">
-            <span class="visually-hidden">Мы в контакте</span>
-          </a>
-        </li>
-        <li class="social-list__item">
-          <a class="social-list__link social-list__link--youtube" href="#">
-            <span class="visually-hidden">Мы в ютубе</span>
-          </a>
-        </li>
-        <li class="social-list__item">
-          <a class="social-list__link social-list__link--facebook" href="#">
-            <span class="visually-hidden">Мы в Фэйсбуке</span>
-          </a>
-        </li>
-      </ul>
-      <div class="page-footer__copyright copyright">
-        <a class="copyright__link copyright-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-        <a class="copyright__logo-html" href="https://htmlacademy.ru/intensive/adaptive">
-          <span class="visually-hidden">Ссылка на интенсив</span>
+      <div class="page-footer__wrapper">
+        <a class="page-footer__logo" href="index.html">
+          <img src="img/logo2-mobile.svg" width="101" height="18" alt="Логотип Кэт Энерджи">
         </a>
+        <ul class="page-footer__social social-list">
+          <li class="social-list__item">
+            <a class="social-list__link social-list__link--vkontakte" href="#">
+              <span class="visually-hidden">Мы в контакте</span>
+            </a>
+          </li>
+          <li class="social-list__item">
+            <a class="social-list__link social-list__link--youtube" href="#">
+              <span class="visually-hidden">Мы в ютубе</span>
+            </a>
+          </li>
+          <li class="social-list__item">
+            <a class="social-list__link social-list__link--facebook" href="#">
+              <span class="visually-hidden">Мы в Фэйсбуке</span>
+            </a>
+          </li>
+        </ul>
+        <div class="page-footer__copyright copyright">
+          <a class="copyright__link copyright-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+          <a class="copyright__logo-html" href="https://htmlacademy.ru/intensive/adaptive">
+            <span class="visually-hidden">Ссылка на интенсив</span>
+          </a>
+        </div>
       </div>
     </footer>
 

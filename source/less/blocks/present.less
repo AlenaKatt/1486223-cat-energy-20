@@ -4,14 +4,23 @@
   background: url(../img/gift-photo-mobile@1x.jpg);
   background-repeat: no-repeat, no-repeat;
   background-position: top 0, center;
+
+  @media (min-width: @desktop-width) {
+    width: 245px;
+    height: 289px;
+  }
 }
 
 .present__wrapper {
   margin-top: 39px;
-  margin-bottom: 35px;
-  margin-left: 20px;
-  margin-right: 20px;
-  border-top: 1px solid transparent;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 69px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 0;
+  }
 }
 
 .present__text {

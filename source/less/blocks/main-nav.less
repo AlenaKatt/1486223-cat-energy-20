@@ -1,8 +1,26 @@
 .main-nav__list {
   .style-list();
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    width: 440px;
+    margin-top: 42px;
+    margin-bottom: 28px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 478px;
+    margin-top: 69px;
+    margin-bottom: 32px;
+  }
 }
 
 .main-nav__toggle {
   outline: 2px solid rgba(255, 0, 0, 0.8);
   outline-offset: -2px;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }
