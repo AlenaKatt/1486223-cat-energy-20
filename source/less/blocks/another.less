@@ -1,3 +1,12 @@
+.another {
+  background: @basic;
+  border-bottom: 2px solid @basic_grey;
+
+  @media (min-width: @tablet-width) {
+    border: 2px solid @basic_grey;
+  }
+}
+
 .another__title {
   margin: 0;
   display: block;

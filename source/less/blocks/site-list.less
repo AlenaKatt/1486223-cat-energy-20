@@ -2,8 +2,15 @@
   display: block;
   padding-top: 22px;
   padding-bottom: 24px;
+  padding-left: 20px;
+  padding-right: 20px;
   text-align: center;
-  .border-bottom();
+  .border-bottom-2();
+
+  @media (min-width: @tablet-width) {
+    border-bottom: none;
+    padding: 0;
+  }
 }
 
 .site-list__link {

@@ -1,0 +1,33 @@
+.index-title {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 36px;
+  text-align: center;
+  color: @basic;
+
+  @media (min-width: @tablet-width) {
+    font-weight: normal;
+    font-size: 60px;
+    line-height: 60px;
+    text-align: left;
+    color: @basic_black;
+  }
+}
+
+.index-title__wrapper {
+    padding-left: 20px;
+    padding-right: 20px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 117px;
+    padding-right: 117px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 1440px;
+    padding-left: 190px;
+    padding-right: 190px;
+    margin: 0 auto;
+  }
+}

@@ -4,13 +4,24 @@
   background: url(../img/index-background-mobile@1x.jpg);
   background-repeat: no-repeat, no-repeat;
   background-position: top 0, center;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 40px;
+    background: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 82px;
+    background: url(../img/index-background-mobile@1x.jpg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: top 0, center;
+  }
+
 }
 .index__title {
   margin: 0;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 36px;
-  line-height: 36px;
-  text-align: center;
-  color: @basic;
+
+  @media (min-width: @tablet-width) {
+    width: 414px;
+  }
 }
