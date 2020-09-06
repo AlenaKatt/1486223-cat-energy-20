@@ -1,4 +1,5 @@
 .site-list__item {
+  position: relative;
   display: block;
   padding-top: 22px;
   padding-bottom: 24px;
@@ -10,6 +11,34 @@
   @media (min-width: @tablet-width) {
     border-bottom: none;
     padding: 0;
+
+    &--active {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 36px;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        height: 2px;
+        background: @basic_green;
+      }
+    }
+  }
+}
+
+.site-list__item a[href] {
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+  @media (min-width: @tablet-width) {
+
   }
 }
 

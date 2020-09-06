@@ -181,12 +181,39 @@
 }
 
 .example__description {
+  position: relative;
+  top: -10px;
   display: block;
+  background: @basic_grey-2;
   width: 87px;
   margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    br {
+      display: none;
+    }
+    background: @basic;
+
+    &--1 {
+      width: 114px;
+    }
+
+    &--2 {
+      width: 142px;
+    }
+  }
 }
 
 .example__toggles {
   margin: 0;
   padding-top: 27px;
+}
+
+.example__item--slim {
+  display: none;
+}
+
+.example__cat-fat {
+  width: 311px;
+  height: 232px;
 }
