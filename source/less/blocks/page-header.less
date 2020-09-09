@@ -19,6 +19,11 @@
     padding-left: 110px;
     padding-right: 110px;
     margin: 0 auto;
+
+    &--index {
+      position: relative;
+      z-index: 1;
+    }
   }
 }
 
@@ -27,6 +32,16 @@
 
   @media (min-width: @tablet-width) {
     padding: 0;
+  }
+}
+
+.page-header__logo-wrapper a[href] {
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
   }
 }
 

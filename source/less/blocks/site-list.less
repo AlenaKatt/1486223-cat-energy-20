@@ -26,6 +26,24 @@
         background: @basic_green;
       }
     }
+    &--active-index {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 36px;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        height: 2px;
+        background: @basic_green;
+
+        @media (min-width: @desktop-width) {
+          background: @basic;
+        }
+      }
+    }
   }
 }
 
@@ -44,4 +62,10 @@
 
 .site-list__link {
   color: @basic_black;
+
+  &--index {
+    @media (min-width: @desktop-width) {
+      color: @basic;
+    }
+  }
 }

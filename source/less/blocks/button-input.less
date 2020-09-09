@@ -16,4 +16,18 @@
   padding-right: 20px;
   padding-top: 3px;
   border: 0;
+
+  &:hover {
+    background-color: @basic_green-2;
+  }
+
+  &:active {
+    color: fade(@basic, 30%);
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 18px;
+    height: 52px;
+  }
 }

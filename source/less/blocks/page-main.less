@@ -1,4 +1,19 @@
 .page-main {
-  background-color: @basic;
+  background-color: @basic_green;
   color: @basic_black;
+
+  &--form {
+    background-color: @basic;
+  }
+
+  @media (min-width: @tablet-width) {
+    background-color: @basic;
+  }
+
+  @media (min-width: @desktop-width) {
+    &--index {
+      margin-top: -141px;
+      padding-top: -141px;
+    }
+  }
 }

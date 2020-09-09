@@ -9,3 +9,59 @@
     margin-bottom: 20px;
   }
 }
+
+.questionnaire__item {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+}
+
+.questionnaire__input {
+  width: 100%;
+  padding-top: 13px;
+  padding-bottom: 14px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border: 1px solid @border-5;
+
+
+  &:hover {
+    border: 1px solid @border;
+  }
+
+  &:active {
+    border: 1px solid @special_dark-grey;
+  }
+
+  &:invalid {
+    border: 1px solid @status_error;
+  }
+}
+
+.questionnaire__label {
+  display: block;
+  padding-top: 14px;
+
+  &--1 {
+    min-width: 52px;
+
+    @media (min-width: @tablet-width) {
+      min-width: 63px;
+    }
+  }
+
+  &--2 {
+    min-width: 76px;
+
+    @media (min-width: @tablet-width) {
+      min-width: 94px;
+    }
+  }
+
+  &--3 {
+    min-width: 114px;
+
+    @media (min-width: @tablet-width) {
+      min-width: 133px;
+    }
+  }
+}
