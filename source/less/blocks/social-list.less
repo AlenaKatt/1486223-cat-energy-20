@@ -1,1 +1,27 @@
+.social-list__wrapper {
+  display: inline-block;
+  text-align: center;
+  min-width: 125px;
+
+  @media (min-width: @tablet-width) {
+    min-width: 122px;
+  }
+}
+
+.social-list__wrapper-flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.social-list__svg {
+  fill: @special_grey-2;
+
+  &:hover {
+    fill: @basic_green;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
 

@@ -44,15 +44,36 @@
 
   @media (min-width: @tablet-width) {
     background-color: @basic_grey;
-    padding-top: 161px;
     padding-bottom: 40px;
     padding-left: 39px;
     padding-right: 37px;
   }
+}
+
+.products__item--anover {
+  padding-top: 26px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 52px;
+  }
+}
+
+.products__item-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 161px min-content;
+  }
 
   @media (min-width: @desktop-width) {
-    padding-top: 162px;
+    grid-template-rows: 162px min-content;
   }
+}
+
+.products__image-wrapper {
+  text-align: center;
 }
 
 .products__image-link {

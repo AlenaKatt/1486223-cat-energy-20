@@ -17,7 +17,7 @@
 
 .additionally__list {
   display: grid;
-  gap: 12px;
+  gap: 25px;
   .style-list();
 
   @media (min-width: @tablet-width) {
@@ -31,3 +31,50 @@
     row-gap: 40px;
   }
 }
+
+.additionally__label {
+  position: relative;
+  padding-top: 6px;
+  padding-left: 43px;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+
+.additionally__input + .additionally__label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  background-color: @basic;
+  border: 1px solid @border;
+}
+
+.additionally__input:checked + .additionally__label::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  background-color: @basic;
+  border: 1px solid @border;
+  background-image: url("../img/icon-tick.svg");
+  background-repeat: no-repeat;
+  background-size: 18px 14px;
+  background-position: 50% 50%;
+}
+
+.additionally__input:focus + .additionally__label::after,
+.additionally__input:focus + .additionally__label::before {
+  outline: 1px solid @basic_black;
+}
+

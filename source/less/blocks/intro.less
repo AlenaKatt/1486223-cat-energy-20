@@ -1,0 +1,125 @@
+.intro {
+  position: relative;
+  background-color: @basic_green;
+  background: url(../img/index-background-mobile@1x.jpg);
+  background-repeat: no-repeat;
+  background-position: center 0;
+
+  @media (min-width: @tablet-width) {
+    background-color: @basic;
+    background: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 696px;
+    margin-bottom: 82px;
+    background: url(../img/index-background-desktop@1x.jpg);
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 50%;
+  }
+}
+
+.intro__wrapper-background {
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 117px;
+    padding-right: 117px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 1440px;
+    padding-left: 190px;
+    padding-right: 190px;
+    margin: 0 auto;
+  }
+}
+.intro__title {
+  margin: 0;
+  padding-top: 27px;
+
+  @media (min-width: @tablet-width) {
+    width: 414px;
+    padding-top: 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 185px;
+  }
+}
+
+.intro__image {
+  position: absolute;
+  z-index: 1;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @media (min-width: @tablet-width) {
+    width: 709px;
+    height: 609px;
+    bottom: 0;
+    transform: translateX(-45%);
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 552px;
+    height: 499px;
+    bottom: 55px;
+    left: 50%;
+    transform: translateX(-25%);
+  }
+}
+
+.intro__wrapper {
+  background: @basic;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 135px;
+  padding-bottom: 22px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 117px;
+    padding-right: 117px;
+    padding-top: 0;
+    padding-bottom: 526px;
+  }
+
+  @media (min-width: @desktop-width) {
+    background: none;
+    max-width: 1440px;
+    padding-left: 190px;
+    padding-right: 190px;
+    padding-bottom: 187px;
+    margin: 0 auto;
+  }
+}
+
+.intro__text {
+  display: block;
+  margin: 0 auto;
+  margin-top: 25px;
+  margin-bottom: 167px;
+
+  @media (min-width: @tablet-width)  {
+    margin-top: 41px;
+    margin-bottom: 49px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 40px;
+    margin-bottom: 52px;
+  }
+}
+
+.intro__button {
+  position: relative;
+  z-index: 2;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+  }
+}

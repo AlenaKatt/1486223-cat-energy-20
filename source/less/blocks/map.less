@@ -1,28 +1,25 @@
 .map {
-  background-color: @background;
-}
-
-.map__wrapper {
-  padding-left: 20px;
-  padding-right: 20px;
-
-  @media (min-width: @tablet-width) {
-    padding-left: 30px;
-    padding-right: 30px;
-  }
-
-  @media (min-width: @desktop-width) {
-    max-width: 1440px;
-    padding-left: 110px;
-    padding-right: 110px;
-    margin: 0 auto;
-  }
+  background-color: @basic;
+  position: relative;
+  z-index: 1;
 }
 
 .map__iframe {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
   border: none;
 }
 
-.map__image-map {
+.map__img {
+  width: 320px;
+  height: 362px;
+}
+
+.map__image-wrapper {
   margin: 0;
+  padding: 0;
+  text-align: center;
 }

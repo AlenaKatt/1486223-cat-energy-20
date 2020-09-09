@@ -152,6 +152,11 @@
   }
 }
 
+.example__list-cats {
+  text-align: center;
+  .style-list();
+}
+
 .example__cost {
   margin: 0;
   padding-top: 20px;
@@ -181,12 +186,128 @@
 }
 
 .example__description {
+  position: relative;
+  top: -10px;
   display: block;
+  background: @basic_grey-2;
   width: 87px;
   margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    br {
+      display: none;
+    }
+    background: @basic;
+
+    &--1 {
+      width: 114px;
+    }
+
+    &--2 {
+      width: 142px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    background: @basic_grey;
+  }
 }
 
-.example__toggles {
+.example__button {
   margin: 0;
+  margin-left: 13px;
+  margin-right: 13px;
+  padding: 0;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 20px;
+    margin-right: 24px;
+  }
+}
+
+.example__cat-fat {
+  width: 311px;
+  height: 232px;
+}
+
+.example__item--slim {
+  display: none;
+}
+
+.example__controls {
+  position: relative;
+  display: inline-block;
+}
+
+.example__scale {
+  display: inline-block;
+  width: 84px;
+  height: 14px;
+  background-color: @basic;
+  border-radius: 6px;
+  border: solid 1px @border;
+
+  @media (min-width: @tablet-width) {
+    width: 428px;
+    height: 6px;
+    background-color: @toggle;
+    border: none;
+    margin-bottom: 5px;
+  }
+}
+
+.example__toggle {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 35px;
+  height: 6px;
+
+  @media (min-width: @tablet-width) {
+    top: -11px;
+    left: 195px;
+    width: 34px;
+    height: 34px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 1px solid @toggle;
+
+    &:hover {
+      border: 1px solid @toggle;
+    }
+
+    &:active {
+      border: 1px solid @basic_green;
+    }
+  }
+}
+
+.example__toggle-point {
+  width: 35px;
+  height: 6px;
+  background-color: @basic_green;
+  border-radius: 6px;
+  margin-top: 3px;
+  margin-left: 5px;
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    width: 34px;
+    height: 34px;
+    background-color: @basic_green;
+    border-radius: 50%;
+    border: 13px solid @basic;
+    box-shadow: 0 1px 3px @shadow;
+  }
+}
+
+.example__button-wrapper {
+  display: block;
+  min-width: 207px;
+  text-align: center;
   padding-top: 27px;
+
+  @media (min-width: @tablet-width) {
+    min-width: 660px;
+  }
 }

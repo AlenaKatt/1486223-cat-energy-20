@@ -1,3 +1,48 @@
 .regimen {
   list-style: none;
 }
+
+.regimen__item {
+  margin-bottom: 30px;
+}
+
+.regimen__label {
+  position: relative;
+  padding-left: 60px;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.regimen__input + .regimen__label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  background-color: @basic;
+  border-radius: 50%;
+  border: 1px solid @border;
+}
+
+.regimen__input:checked + .regimen__label::after {
+  content: "";
+  position: absolute;
+  top: 11px;
+  left: 11px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: @basic_green;
+}
+
+.regimen__input:focus + .regimen__label::before {
+  outline: 1px solid @basic_black;
+}
+
