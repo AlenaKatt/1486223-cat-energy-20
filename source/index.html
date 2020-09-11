@@ -263,22 +263,24 @@
             </div>
             <div class="example__wrapper-background-2">
               <div class="example__wrapper-slider slider">
-                <ul class="example__list-cats slider__list">
-                  <li class="example__item example__item--fat slider__item">
-                    <picture>
-                      <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
-                      <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
-                      <img class="example__cat example__cat--fat" width="320" height="240" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" alt="Фотография кота до">
-                    </picture>
-                  </li>
-                  <li class="example__item example__item--slim slider__item">
-                    <picture>
-                      <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
-                      <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
-                      <img class="example__cat example__cat--slim"  width="320" height="240" src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" alt="Фотография кота после">
-                    </picture>
-                  </li>
-                </ul>
+                <div class="slider__list-wrapper">
+                  <ul class="slider__list">
+                    <li class="slider__item slider__item--fat">
+                      <picture>
+                        <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
+                        <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
+                        <img class="slider__cat slider__cat--fat" width="320" height="240" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" alt="Фотография кота до">
+                      </picture>
+                    </li>
+                    <li class="slider__item slider__item--slim">
+                      <picture>
+                        <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
+                        <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
+                        <img class="slider__cat example__cat--slim"  width="320" height="240" src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" alt="Фотография кота после">
+                      </picture>
+                    </li>
+                  </ul>
+                </div>
                 <div class="example__button-wrapper">
                   <button class="example__button example-button example__button--current" type="button">
                     Было

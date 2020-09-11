@@ -1,7 +1,8 @@
 .user-contact__title-wrapper {
+  display: block;
   text-align: left;
   margin: 0;
-  padding: 0;
+  padding-left: 0;
   padding-top: 26px;
   padding-bottom: 33px;
 
@@ -64,6 +65,7 @@
   padding-left: 16px;
   padding-right: 16px;
   border: 1px solid @border-5;
+  background-color: none;
 
   &:hover {
     border: 1px solid @border;
@@ -95,16 +97,16 @@
     top: 15px;
     transform: translateX(-150%);
   }
+}
 
-  &:hover {
-    fill: @special_dark-grey-2;;
-  }
+.user-contact__input:hover + .user-contact__button {
+  fill: @special_dark-grey-2;
+}
 
-  &:active {
-    fill: @basic_green;
-  }
+.user-contact__input:hover + .user-contact__button {
+  fill: @basic_green;
+}
 
-  &:invalid {
-    fill: @status_error;
-  }
+.user-contact__input:invalid + .user-contact__button {
+  fill: @status_error;
 }

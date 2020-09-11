@@ -1,4 +1,5 @@
 .profile-title {
+  display: flex;
   font-style: normal;
   font-weight: normal;
   font-size: 24px;
@@ -9,4 +10,13 @@
     font-size: 36px;
     line-height: 36px;
   }
+}
+
+.profile-title::before,
+.profile-title::after {
+  content: "";
+  flex-grow: 1;
+  flex-shrink: 0;
+  height: 2px;
+  background: @basic_green;
 }
