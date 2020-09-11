@@ -2,6 +2,7 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -12,7 +13,11 @@
       <div class="page-header__wrapper page-header__wrapper--index">
         <div class="page-header__logo-wrapper">
           <a class="page-header__logo">
-            <img src="img/logo-mobile.svg" width="190" height="37" alt="Логотип Котик">
+            <picture>
+              <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+              <img class="page-header__image" src="img/logo-mobile.svg" width="190" height="37" alt="Логотип Котик">
+            </picture>
           </a>
         </div>
 
@@ -52,7 +57,11 @@
           <p class="intro__text intro-text">
             Занялся собой? Займись котом!
           </p>
-          <img class="intro__image" src="img/index-can-mobile@1x.png" width="280" height="270" alt="Фото баночки с питанием Cat Energy">
+          <picture>
+            <source media="(min-width: 1300px)" srcset="img/index-can-desktop@1x.png 1x, img/index-can-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg 1x, img/index-can-tablet@2x.jpg 2x">
+            <img class="intro__image" src="img/index-can-mobile@1x.png"  srcset="img/index-can-mobile@2x.png 2x" width="280" height="270" alt="Фото баночки с питанием Cat Energy">
+          </picture>
         </div>
         <div class="intro__wrapper">
           <a class="intro__button button button--index" href="form.html">
@@ -159,7 +168,7 @@
           <ul class="advantage__list">
             <li class="advantage__item advantage__item--1 text-basic">
               <div class="advantage__image-wrapper">
-                <img  class="advantage__image" src="img/advantage-leaf@1x.png" width="50" height="50" alt="Иконка листик">
+                <img  class="advantage__image" src="img/advantage-leaf@1x.png" srcset="img/advantage-leaf@2x.png 2x" width="50" height="50" alt="Иконка листик">
               </div>
               <p class="advantage__text">
                 Функциональное питание
@@ -169,7 +178,7 @@
             </li>
             <li class="advantage__item advantage__item--2 text-basic">
               <div class="advantage__image-wrapper">
-                <img  class="advantage__image" src="img/advantage-powder@1x.png" width="50" height="50" alt="Иконка листик">
+                <img  class="advantage__image" src="img/advantage-powder@1x.png" srcset="img/advantage-powder@2x.png 2x" width="50" height="50" alt="Иконка порошок">
               </div>
               <p class="advantage__text">
                 Выпускается в виде порошка,
@@ -179,7 +188,7 @@
             </li>
             <li class="advantage__item advantage__item--3 text-basic">
               <div class="advantage__image-wrapper">
-                <img  class="advantage__image" src="img/advantage-dining@1x.png" width="50" height="50" alt="Иконка листик">
+                <img  class="advantage__image" src="img/advantage-dining@1x.png" srcset="img/advantage-dining@2x.png 2x" width="50" height="50" alt="Иконка приборы для еды">
               </div>
               <p class="advantage__text">
                 Заменить один-два приема
@@ -189,7 +198,7 @@
             </li>
             <li class="advantage__item advantage__item--4 text-basic">
               <div class="advantage__image-wrapper">
-                <img  class="advantage__image" src="img/advantage-clock@1x.png" width="50" height="50" alt="Иконка листик">
+                <img  class="advantage__image" src="img/advantage-clock@1x.png" srcset="img/advantage-clock@2x.png 2x" width="50" height="50" alt="Иконка часы">
               </div>
               <p class="advantage__text">
                 Уже через месяц
@@ -203,113 +212,127 @@
       </section>
 
       <section class="example">
-          <div class="example__title-wrapper">
-            <h2 class="example__title title-basic">
-              Живой пример
-            </h2>
-          </div>
-          <div class="example__wrapper-main">
-            <div class="example__wrapper-grid">
-              <div class="example__wrapper-background">
-                <div class="example__wrapper-centerer">
-                  <p class="example__text text-basic">
-                    Борис сбросил 5 кг за 2 месяца, просто
-                    заменив свой обычный корм на Cat
-                    Energy Slim. Отличный результат без
-                    изнуряющих тренировок! При этом он не
-                    менял своих привычек и по-прежнему
-                    спит по 16 часов в день.
-                  </p>
-                  <div class="example__wrapper-list-cost">
-                    <div class="example__list">
-                      <div class="example__item">
-                        <p class="example__number example-number">
-                          5 кг
-                        </p>
-                        <p class="example__description example__description--1 example-description">
-                          снижение<br>
-                          веса
-                        </p>
-                      </div>
-                      <div class="example__item">
-                        <p class="example__number example-number">
-                          60 дней
-                        </p>
-                        <p class="example__description example__description--2 example-description">
-                          затрачено<br>
-                          времени
-                        </p>
-                      </div>
-                    </div>
-                    <div class="example__cost example-cost">
-                      <p class="example-cost__wrapper example-cost">
-                        Затраты на питание:
+        <div class="example__title-wrapper">
+          <h2 class="example__title title-basic">
+            Живой пример
+          </h2>
+        </div>
+        <div class="example__wrapper-main">
+          <div class="example__wrapper-grid">
+            <div class="example__wrapper-background">
+              <div class="example__wrapper-centerer">
+                <p class="example__text text-basic">
+                  Борис сбросил 5 кг за 2 месяца, просто
+                  заменив свой обычный корм на Cat
+                  Energy Slim. Отличный результат без
+                  изнуряющих тренировок! При этом он не
+                  менял своих привычек и по-прежнему
+                  спит по 16 часов в день.
+                </p>
+                <div class="example__wrapper-list-cost">
+                  <div class="example__list">
+                    <div class="example__item-small">
+                      <p class="example__number example-number">
+                        5 кг
                       </p>
-                      <p class="example-cost__wrapper example-cost">
-                        15 000 руб.
+                      <p class="example__description example__description--1 example-description">
+                        снижение<br>
+                        веса
+                      </p>
+                    </div>
+                    <div class="example__item-small">
+                      <p class="example__number example-number">
+                        60 дней
+                      </p>
+                      <p class="example__description example__description--2 example-description">
+                        затрачено<br>
+                        времени
                       </p>
                     </div>
                   </div>
-                </div>
-              </div>
-              <div class="example__wrapper-background-2">
-                <div class="example__wrapper-slider slider">
-                  <ul class="example__list-cats slider__list">
-                    <li class="example__item example__item--fat slider__item">
-                      <img class="example__cat-fat"  width="311" height="232" src="img/before-mobile@1x.png" alt="Фото упитанного кота">
-                    </li>
-                    <li class="example__item example__item--slim slider__item">
-                      <img class="example__cat-slim"  width="311" height="232" src="img/after-mobile@1x.png" alt="Фото стройного кота">
-                    </li>
-                  </ul>
-                  <div class="example__button-wrapper">
-                    <button class="example__button example-button example__button--current" type="button">
-                      Было
-                    </button>
-                    <div class="example__controls">
-                      <div class="example__scale"></div>
-                      <div class="example__toggle" tabindex="0">
-                        <div class="example__toggle-point"></div>
-                      </div>
-                    </div>
-                    <button class="example__button example-button" type="button">
-                      Стало
-                    </button>
+                  <div class="example__cost example-cost">
+                    <p class="example-cost__wrapper example-cost">
+                      Затраты на питание:
+                    </p>
+                    <p class="example-cost__wrapper example-cost">
+                      15 000 руб.
+                    </p>
                   </div>
                 </div>
               </div>
             </div>
+            <div class="example__wrapper-background-2">
+              <div class="example__wrapper-slider slider">
+                <ul class="example__list-cats slider__list">
+                  <li class="example__item example__item--fat slider__item">
+                    <picture>
+                      <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
+                      <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
+                      <img class="example__cat example__cat--fat" width="320" height="240" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" alt="Фотография кота до">
+                    </picture>
+                  </li>
+                  <li class="example__item example__item--slim slider__item">
+                    <picture>
+                      <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
+                      <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
+                      <img class="example__cat example__cat--slim"  width="320" height="240" src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" alt="Фотография кота после">
+                    </picture>
+                  </li>
+                </ul>
+                <div class="example__button-wrapper">
+                  <button class="example__button example-button example__button--current" type="button">
+                    Было
+                  </button>
+                  <div class="example__controls">
+                    <div class="example__scale"></div>
+                    <div class="example__toggle" tabindex="0">
+                      <div class="example__toggle-point"></div>
+                    </div>
+                  </div>
+                  <button class="example__button example-button" type="button">
+                    Стало
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
+        </div>
       </section>
 
       <section class="contacts">
-        <div class="contacts__wrapper">
-          <h2 class="visually-hidden">
-            Наш адрес
-          </h2>
-          <p class="contacts__invitation contacts-invitation">
-            Приглашаем<br>
-            к сотрудничеству<br>
-            дилеров!
-          </p>
-          <div>
-            <p class="contacts__address contacts-address">
-              ул. Большая<br>
-              Конюшенная, д. 19/8
+        <div class="contacts__wrapper-size">
+          <div class="contacts__wrapper">
+            <h2 class="visually-hidden">
+              Наш адрес
+            </h2>
+            <p class="contacts__invitation contacts-invitation">
+              Приглашаем<br>
+              к сотрудничеству<br>
+              дилеров!
             </p>
-            <p class="contacts__city contacts-address">
-              Санкт-Петербург
+            <div>
+              <p class="contacts__address contacts-address">
+                ул. Большая<br>
+                Конюшенная, д. 19/8
+              </p>
+              <p class="contacts__city contacts-address">
+                Санкт-Петербург
+              </p>
+            </div>
+          </div>
+          <div class="map map__wrapper">
+            <h2 class="visually-hidden">
+              Мы на карте
+            </h2>
+            <iframe class="map__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1599479873212!5m2!1sru!2sru" width="320" height="362" frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            <p class="map__image-wrapper">
+              <picture>
+                <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.png 1x, img/bg-map-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png 1x, img/bg-map-tablet@2x.png 2x">
+                <img class="map__img" src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x" width="320" height="362" alt="Санкт-Петербург, ул.Большая Конюшенная, д. 19/8">
+              </picture>
             </p>
           </div>
-        </div>
-        <div class="map map__wrapper">
-          <h2 class="visually-hidden">
-            Мы на карте
-          </h2>
-          <iframe class="map__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1599479873212!5m2!1sru!2sru" width="320" height="362" frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-          <p class="map__image-wrapper">
-            <img class="map__img" src="img/bg-map-mobile@1x.png" width="320" height="362" alt="Санкт-Петербург, ул.Большая Конюшенная, д. 19/8">
-          </p>
         </div>
       </section>
     </main>
