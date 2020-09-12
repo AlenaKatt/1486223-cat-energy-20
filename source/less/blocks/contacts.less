@@ -1,5 +1,21 @@
 .contacts {
   background-color: @basic;
+
+  @media (min-width: @desktop-width) {
+    max-width: 1440px;
+    padding-left: 110px;
+    padding-right: 110px;
+    margin: 0 auto;
+  }
+}
+
+.contacts__wrapper-size {
+  @media (min-width: @desktop-width) {
+    position: relative;
+    max-width: 1440px;
+    height: 400px;
+    padding-top: 95px;
+  }
 }
 
 .contacts--variant {
@@ -26,11 +42,12 @@
   }
 
   @media (min-width: @desktop-width) {
+    position: relative;
+    z-index: 2;
+    background: @basic;
     width: 570px;
     padding-left: 76px;
     padding-right: 89px;
-    outline: 2px solid rgba(255, 0, 0, 0.8);
-    outline-offset: -2px;
   }
 }
 

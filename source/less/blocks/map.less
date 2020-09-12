@@ -2,20 +2,42 @@
   background-color: @basic;
   position: relative;
   z-index: 1;
+  width: 1440px;
+  margin: 0 auto;
 }
 
 .map__iframe {
   position: absolute;
   top: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
+  width: 100%;
+  height: 100%;
   z-index: 2;
   border: none;
 }
 
 .map__img {
-  width: 320px;
+  width: 100%;
   height: 362px;
+  object-fit: cover;
+
+  @media (min-width: @tablet-width) {
+    height: 400px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1440px;
+  }
+}
+
+.map__wrapper {
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+  }
 }
 
 .map__image-wrapper {
