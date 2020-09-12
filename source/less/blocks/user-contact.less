@@ -1,5 +1,4 @@
 .user-contact__title-wrapper {
-  display: block;
   text-align: left;
   margin: 0;
   padding-left: 0;
@@ -7,12 +6,20 @@
   padding-bottom: 33px;
 
   @media (min-width: @tablet-width) {
+    padding-left: 30px;
+    padding-right: 30px;
     padding-top: 75px;
     padding-bottom: 76px;
   }
 
   @media (min-width: @desktop-width) {
+    display: block;
+    text-align: start;
     padding-top: 69px;
+    padding-left: 70px;
+    padding-right: 70px;
+    width: 1300px;
+    margin: 0 auto;
   }
 }
 
@@ -29,6 +36,23 @@
     grid-template-columns: 1fr 1fr;
     column-gap: 80px;
     row-gap: 30px;
+  }
+}
+
+.user-contact__list-wrapper {
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 70px;
+    padding-right: 67px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 1440px;
+    padding-left: 110px;
+    padding-right: 110px;
+    margin: 0 auto;
   }
 }
 

@@ -241,28 +241,37 @@
   }
 }
 
-.example__toggle {
+.example__toggle{
   position: absolute;
+  z-index: 1;
   top: 5px;
   left: 5px;
   width: 35px;
   height: 6px;
+  background: transparent;
 
   @media (min-width: @tablet-width) {
     top: -11px;
     left: 195px;
     width: 34px;
     height: 34px;
-    background-color: transparent;
+    background-color: @basic;
     border-radius: 50%;
     border: 1px solid @toggle;
+    box-shadow: 0 1px 3px @shadow-1;
 
     &:hover {
       border: 1px solid @toggle;
+      box-shadow: 0 2px 4px @shadow-2;
     }
 
     &:active {
       border: 1px solid @basic_green;
+      box-shadow: 0 3px 5px @shadow-2;
+    }
+
+    &:focus {
+      outline: none;
     }
   }
 }
@@ -277,20 +286,14 @@
   margin: 0;
 
   @media (min-width: @tablet-width) {
-    width: 34px;
-    height: 34px;
+    position: absolute;
+    z-index: 2;
+    top: 37%;
+    left: 37%;
+    width: 8px;
+    height: 8px;
     background-color: @basic_green;
     border-radius: 50%;
-    border: 13px solid @basic;
-    box-shadow: 0 1px 3px @shadow-1;
-
-    &:hover {
-      box-shadow: 0 2px 4px @shadow-2;
-    }
-
-    &:active {
-      box-shadow: 0 3px 5px @shadow-2;
-    }
   }
 }
 
