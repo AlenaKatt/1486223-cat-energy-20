@@ -4,6 +4,8 @@
 
   @media (min-width: @tablet-width) {
     border: 2px solid @basic_grey;
+    display: grid;
+    grid-template-rows: min-content 1fr min-content;
   }
 }
 
@@ -34,6 +36,13 @@
   margin: 0 auto;
 }
 
-.another__image-plus {
+.another__image-wrapper {
   text-align: center;
+}
+
+.another__image {
+  @media (min-width: @tablet-width) {
+    width: 60px;
+    height: 60px;
+  }
 }

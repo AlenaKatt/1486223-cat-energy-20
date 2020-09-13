@@ -1,17 +1,25 @@
 .additionally__title-wrapper {
   text-align: left;
   margin: 0;
-  padding: 0;
+  padding-left: 0;
   padding-top: 27px;
   padding-bottom: 34px;
 
   @media (min-width: @tablet-width) {
+    padding-left: 30px;
+    padding-right: 30px;
     padding-top: 65px;
     padding-bottom: 57px;
   }
 
   @media (min-width: @desktop-width) {
+    display: block;
+    text-align: start;
     padding-top: 67px;
+    padding-left: 70px;
+    padding-right: 70px;
+    width: 1300px;
+    margin: 0 auto;
   }
 }
 
@@ -32,11 +40,30 @@
   }
 }
 
+.additionally__list-wrapper {
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 70px;
+    padding-right: 67px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 1440px;
+    padding-left: 110px;
+    padding-right: 110px;
+    margin: 0 auto;
+  }
+}
+
 .additionally__label {
   position: relative;
   padding-top: 6px;
   padding-left: 43px;
+}
 
+.additionally__label-wrapper {
   &:hover {
     opacity: 1;
   }
@@ -46,7 +73,6 @@
   }
 }
 
-
 .additionally__input + .additionally__label::before {
   content: "";
   position: absolute;
@@ -54,26 +80,28 @@
   left: 0;
   width: 30px;
   height: 30px;
-  background-color: @basic;
+  background-color: transparent;
   border: 1px solid @border;
+}
+
+.additionally__label:active::before {
+  border: 1px solid @border-active;
 }
 
 .additionally__input:checked + .additionally__label::after {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 30px;
-  height: 30px;
-  background-color: @basic;
-  border: 1px solid @border;
+  top: 2px;
+  left: 2px;
+  width: 26px;
+  height: 26px;
+  background-color: transparent;
   background-image: url("../img/icon-tick.svg");
   background-repeat: no-repeat;
   background-size: 18px 14px;
   background-position: 50% 50%;
 }
 
-.additionally__input:focus + .additionally__label::after,
 .additionally__input:focus + .additionally__label::before {
   outline: 1px solid @basic_black;
 }

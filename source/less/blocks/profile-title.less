@@ -10,3 +10,78 @@
     line-height: 36px;
   }
 }
+
+.profile-title__contact-wrapper {
+  position: relative;
+  z-index: 2;
+  display: block;
+  background-color: @basic;
+  width: 222px;
+  padding-left: 20px;
+  padding-right: 15px;
+
+  @media (min-width: @tablet-width) {
+    width: 592px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+.profile-title__comment-wrapper {
+  position: relative;
+  z-index: 2;
+  display: block;
+  background-color: @basic;
+  width: 163px;
+  padding-left: 20px;
+  padding-right: 22px;
+
+  @media (min-width: @tablet-width) {
+    width: 262px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+.profile-title__additionally-wrapper {
+  position: relative;
+  z-index: 2;
+  display: block;
+  background-color: @basic;
+  width: 184px;
+  padding-left: 20px;
+  padding-right: 24px;
+
+  @media (min-width: @tablet-width) {
+    width: 292px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+
+.profile-title::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 42px;
+  width: 100vw;
+  height: 2px;
+  background: @basic_green;
+
+  @media (min-width: @tablet-width) {
+    top: 90px;
+  }
+}
+.profile-title::after {
+  @media (min-width: @tablet-width) {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 90px;
+    right: 0;
+    width: 100vw;
+    height: 2px;
+    background: @basic_green
+  }
+}

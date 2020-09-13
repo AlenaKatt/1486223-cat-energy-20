@@ -61,7 +61,7 @@
   }
 }
 
-.advice-item__link {
+.advice-item__link-wrapper {
   grid-column-start: 1;
   grid-column-end: 3;
   display: block;
@@ -79,7 +79,43 @@
   }
 }
 
+.advice-item__link {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: @basic_black;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.advice-item__link:hover .advice-item__svg {
+  display: none;
+}
+
+.advice-item__link:hover .advice-item__svg-long {
+  display: inline;
+}
+
 .advice-item__svg {
   margin-left: 16px;
   fill: @basic_black;
+}
+
+.advice-item__svg-long {
+  margin-left: 16px;
+  fill: @basic_black;
+  display: none;
 }

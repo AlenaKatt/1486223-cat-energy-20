@@ -1,5 +1,6 @@
 .button-another {
   display: block;
+  width: 100%;
   height: 40px;
   background-color: @basic_grey;
   font-style: normal;
@@ -10,4 +11,12 @@
   text-transform: uppercase;
   color: @special_dark-grey;
   padding-top: 11px;
+
+  &:hover {
+    background: @special_grey;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
