@@ -3,13 +3,15 @@
 }
 
 .regimen__item {
-  margin-bottom: 30px;
+  margin-bottom: 15px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 14px;
+  }
 }
 
 .regimen__label {
   position: relative;
-  padding-left: 60px;
-
   &:hover {
     opacity: 1;
   }
@@ -19,30 +21,51 @@
   }
 }
 
+.regimen__label-wrapper {
+  display: inline-block;
+  padding-left: 45px;
+  padding-top: 9px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 60px;
+  }
+}
+
 .regimen__input + .regimen__label::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   background-color: @basic;
   border-radius: 50%;
   border: 1px solid @border;
+
+  @media (min-width: @tablet-width) {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 .regimen__input:checked + .regimen__label::after {
   content: "";
   position: absolute;
-  top: 11px;
-  left: 11px;
-  width: 18px;
-  height: 18px;
+  top: 8px;
+  left: 8px;
+  width: 14px;
+  height: 14px;
   border-radius: 50%;
   background-color: @basic_green;
+
+  @media (min-width: @tablet-width) {
+    top: 11px;
+    left: 11px;
+    width: 18px;
+    height: 18px;
+  }
 }
 
 .regimen__input:focus + .regimen__label::before {
   outline: 1px solid @basic_black;
 }
-

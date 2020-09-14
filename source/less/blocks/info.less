@@ -2,13 +2,13 @@
   display: block;
   width: 76px;
   margin: 0;
-  padding-bottom: 14px;
+  padding-bottom: 12px;
 
   @media (min-width: @tablet-width)  {
     text-align: center;
     width: 145px;
     margin: 0 auto;
-    padding-bottom: 21px;
+    padding-bottom: 17px;
   }
 }
 
@@ -24,22 +24,32 @@
 .info__description {
   margin: 0;
   text-align: left;
-  padding-bottom: 5px;
+  padding: 0;
 
   @media (min-width: @tablet-width) {
-    padding-bottom: 9px;
-    padding-top: 7px;
+    padding-bottom: 8px;
+    padding-top: 5px;
     border-bottom: 1px solid @border;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 9px;
+    padding-top: 6px;
   }
 }
 
 .info__value {
   text-align: right;
-  padding-bottom: 5px;
+  padding: 0;
 
   @media (min-width: @tablet-width) {
-    padding-bottom: 9px;
-    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-top: 5px;
     border-bottom: 1px solid @border;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 9px;
+    padding-top: 6px;
   }
 }

@@ -4,10 +4,12 @@
   padding-top: 27px;
 
   @media (min-width: @tablet-width) {
+    padding-top: 45px;
     border-bottom: 1px solid @border-3;
   }
 
   @media (min-width: @desktop-width) {
+    padding-top: 0;
     border: none;
   }
 }
@@ -26,7 +28,7 @@
   @media (min-width: @desktop-width) {
     max-width: 1440px;
     padding-left: 110px;
-    padding-right: 110px;
+    padding-right: 95px;
     padding-bottom: 11px;
     margin: 0 auto;
   }
@@ -38,8 +40,7 @@
   text-align: left;
 
   @media (min-width: @tablet-width) {
-    margin-top: 45px;
-    margin-bottom: 72px;
+    margin-bottom: 32px;
   }
 
   @media (min-width: @desktop-width) {
@@ -54,14 +55,14 @@
 
   @media (min-width: @tablet-width) {
     grid-template-columns: 1fr 1fr;
-    row-gap: 77px;
+    row-gap: 36px;
     column-gap: 137px;
   }
 
   @media (min-width: @desktop-width) {
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    row-gap: 30px;
-    column-gap: 60px;
+    row-gap: 36px;
+    column-gap: 65px;
 
   }
 }
@@ -130,6 +131,7 @@
 }
 
 .advantage__text {
+  padding-top: 3px;
   margin: 0;
 
   @media (max-width: @mobile-width-only) {
