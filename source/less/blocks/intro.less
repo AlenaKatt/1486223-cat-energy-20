@@ -1,7 +1,7 @@
 .intro {
   position: relative;
   background-color: @basic_green;
-  background: url(../img/index-background-mobile@1x.jpg);
+  background-image: url("../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: center 0;
 
@@ -12,13 +12,13 @@
 
   @media (min-width: @tablet-width) {
     background-color: @basic;
-    background: none;
+    background-image: none;
   }
 
   @media (min-width: @desktop-width) {
     min-height: 696px;
     margin-bottom: 82px;
-    background: url(../img/index-background-desktop@1x.jpg);
+    background: url("../img/index-background-desktop@1x.jpg");
     background-repeat: no-repeat;
     background-position: top right;
     background-size: 50%;
@@ -45,6 +45,7 @@
     margin: 0 auto;
   }
 }
+
 .intro__title {
   margin: 0;
   padding-top: 27px;
@@ -112,7 +113,7 @@
   margin-top: 25px;
   margin-bottom: 167px;
 
-  @media (min-width: @tablet-width)  {
+  @media (min-width: @tablet-width) {
     margin-top: 41px;
     margin-bottom: 49px;
   }

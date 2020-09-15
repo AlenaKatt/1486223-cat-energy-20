@@ -5,11 +5,11 @@ const less = require("gulp-less");
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const sync = require("browser-sync").create();
-const csso = require("csso");
-const rename = require("rename");
+const csso = require("gulp-csso");
+const rename = require("gulp-rename");
 const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
-const svgstore = require("svg-store");
+const svgstore = require("gulp-svgstore");
 const del = require("del");
 
 // images
@@ -23,15 +23,17 @@ const images = () => {
     ]))
 }
 
+exports.images = images;
+
 // webp
 
-const webp = () => {
+function createWebp() {
   return gulp.src("source/img/**/*.{png,svg}")
-    .pipe(webp({quality: 90}))
-    .pipe(gulp.dest("source/img"))
+    .pipe(webp({ quality: 90 }))
+    .pipe(gulp.dest("source/img"));
 }
 
-exports.webp = webp;
+exports.webp = createWebp;
 
 //sprite
 
@@ -92,7 +94,6 @@ exports.default = gulp.series(
   styles, server, watcher
 );
 
-var less = require('gulp-less');
 var path = require('path');
 
 gulp.task('less', function () {
