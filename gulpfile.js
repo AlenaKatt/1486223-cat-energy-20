@@ -4,47 +4,13 @@ const sourcemap = require("gulp-sourcemaps");
 const less = require("gulp-less");
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
-const sync = require("browser-sync").create();
 const csso = require("gulp-csso");
 const rename = require("gulp-rename");
 const imagemin = require("gulp-imagemin");
+const sync = require("browser-sync").create();
 const webp = require("gulp-webp");
-const svgstore = require("gulp-svgstore");
 const del = require("del");
-
-// images
-
-const images = () => {
-  return gulp.src("source/img/**/*.{jpg,png,svg}")
-    .pipe(imagemin([
-      imagemin.optipng({optimizationLevel: 3}),
-      imagemin.jpegtran ({progressive: true}),
-      imagemin.svgo()
-    ]))
-}
-
-exports.images = images;
-
-// webp
-
-function createWebp() {
-  return gulp.src("source/img/**/*.{png,svg}")
-    .pipe(webp({ quality: 90 }))
-    .pipe(gulp.dest("source/img"));
-}
-
-exports.webp = createWebp;
-
-//sprite
-
-const sprite = () => {
-  return gulp.src("source/img/**/icon-*.svg")
-    .pipe(svgstore())
-    .pipe(rename("sprite.svg"))
-    .pipe(gulp.dest("build/img"))
-}
-
-exports.sprite = sprite;
+const svgstore = require("gulp-svgstore");
 
 // Styles
 
@@ -104,23 +70,66 @@ gulp.task('less', function () {
     .pipe(gulp.dest('./public/css'));
 });
 
-//build
+// images
+
+const images = () => {
+  return gulp.src("source/img/**/*.{jpg,png,svg}")
+    .pipe(imagemin([
+      imagemin.optipng({optimizationLevel: 3}),
+      imagemin.svgo()
+    ]))
+}
+
+exports.images = images;
+
+// webp
+
+function createWebp() {
+  return gulp.src("source/img/**/*.{jpg,png,svg}")
+    .pipe(webp({ quality: 90 }))
+    .pipe(gulp.dest("source/img"));
+}
+
+exports.webp = createWebp;
+
+//sprite
+
+const sprite = () => {
+  return gulp.src("source/img/**/icon-*.svg")
+    .pipe(svgstore())
+    .pipe(rename("sprite.svg"))
+    .pipe(gulp.dest("build/img"))
+}
+
+exports.sprite = sprite;
+
+//copy
 
 const copy = () => {
-  return gulp.src ([
+  return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
     "source/img/**",
     "source/js/**",
     "source/*.ico"
-    ], {
-      base: "source"
-      })
-    .pipe(gulp.dest("build"));
+  ], {
+    base: "source"
+  })
+  .pipe(gulp.dest("build"));
 };
 
-exports.copy = copy
+exports.copy = copy;
 
-const build = () => gulp.series(
+// del
+
+const clean = () => {
+  return del("build");
+};
+
+exports.clean = clean;
+
+// build
+
+const build = gulp.series(
   "clean",
   "copy",
   "css",
@@ -128,8 +137,4 @@ const build = () => gulp.series(
   "html"
 );
 
-// del
-
-const clean = () => {
-  return del("build");
-}
+exports.build = build;
