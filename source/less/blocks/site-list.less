@@ -18,21 +18,26 @@
       &::after {
         content: "";
         position: absolute;
-        top: 36px;
+        top: 32px;
         right: 0;
         bottom: 0;
         left: 0;
         height: 2px;
         background: @basic_green;
+
+        @media (min-width: @desktop-width) {
+          top: 34px;
+        }
       }
     }
+
     &--active-index {
       position: relative;
 
       &::after {
         content: "";
         position: absolute;
-        top: 36px;
+        top: 32px;
         right: 0;
         bottom: 0;
         left: 0;
@@ -41,6 +46,7 @@
 
         @media (min-width: @desktop-width) {
           background: @basic;
+          top: 34px;
         }
       }
     }
@@ -54,9 +60,6 @@
 
   &:active {
     opacity: 0.3;
-  }
-  @media (min-width: @tablet-width) {
-
   }
 }
 

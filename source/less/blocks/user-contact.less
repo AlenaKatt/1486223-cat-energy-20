@@ -3,29 +3,28 @@
   margin: 0;
   padding-left: 0;
   padding-top: 26px;
-  padding-bottom: 33px;
+  padding-bottom: 32px;
 
   @media (min-width: @tablet-width) {
     padding-left: 30px;
     padding-right: 30px;
-    padding-top: 75px;
-    padding-bottom: 76px;
+    padding-top: 72px;
+    padding-bottom: 80px;
   }
 
   @media (min-width: @desktop-width) {
     display: block;
+    width: 1440px;
     text-align: start;
-    padding-top: 69px;
     padding-left: 70px;
     padding-right: 70px;
-    width: 1300px;
     margin: 0 auto;
   }
 }
 
 .user-contact__list {
   display: grid;
-  gap: 14px;
+  gap: 11px;
   .style-list();
 
   @media (min-width: @tablet-width) {
@@ -67,10 +66,13 @@
   padding-top: 14px;
 
   &--1 {
-    padding-right: 12px;
+    padding-right: 10px;
+    width: 60px;
 
     @media (min-width: @tablet-width) {
+      padding-top: 11px;
       padding-right: 19px;
+      width: 82px;
     }
   }
 
@@ -78,7 +80,8 @@
     padding-right: 9px;
 
     @media (min-width: @tablet-width) {
-      padding-right : 15px;
+      padding-top: 11px;
+      padding-right: 15px;
     }
   }
 }
@@ -102,6 +105,12 @@
   &:invalid {
     border: 1px solid @status_error;
   }
+
+  @media (min-width: @tablet-width) {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 18px;
+  }
 }
 
 .user-contact__button {
@@ -121,10 +130,6 @@
     top: 15px;
     transform: translateX(-150%);
   }
-}
-
-.user-contact__input:hover + .user-contact__button {
-  fill: @special_dark-grey-2;
 }
 
 .user-contact__input:hover + .user-contact__button {

@@ -51,6 +51,10 @@
     padding-bottom: 52px;
     padding-right: 17px;
     border-bottom: none;
+
+    &--pro {
+      padding-right: 50px;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -58,6 +62,11 @@
     grid-column-end: 3;
     padding-top: 39px;
     padding-bottom: 27px;
+    padding-right: 0;
+
+    &--pro {
+      padding-right: 0;
+    }
   }
 }
 
@@ -110,12 +119,23 @@
 }
 
 .advice-item__svg {
-  margin-left: 16px;
+  margin-left: 10px;
+  padding-bottom: 2px;
   fill: @basic_black;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 20px;
+    padding-bottom: 5px;
+  }
 }
 
 .advice-item__svg-long {
-  margin-left: 16px;
+  margin-left: 10px;
   fill: @basic_black;
   display: none;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 20px;
+    padding-bottom: 5px;
+  }
 }
